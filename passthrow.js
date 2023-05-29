@@ -1,17 +1,15 @@
 function getSelectedElemPositions(assembledElems, selectedElems) {
-    let [assembledElemsArray, selectedElemsArray] = [
-      [...assembledElems],
-      [...selectedElems],
-    ];
+  if (!Array.isArray(assembledElems)) assembledElems = Array.from(assembledElems);
+  if (!Array.isArray(selectedElems)) selectedElems = Array.from(selectedElems);
     let sequencePosition = 0;
-    return selectedElemsArray.map((elem) => {
-      let receivedPosition = assembledElemsArray.indexOf(elem, sequencePosition);
+    return selectedElems.map((elem) => {
+      let receivedPosition = assembledElems.indexOf(elem, sequencePosition);
       sequencePosition = receivedPosition + 1;
       return receivedPosition;
     });
   }
-  
-  function getCurrentValueControlFunctions(current) {
+
+  function getValueControlFunctions(current) {
     return [
       function () {
         return current;
@@ -22,4 +20,4 @@ function getSelectedElemPositions(assembledElems, selectedElems) {
     ];
   }
 
-  export {getSelectedElemPositions, getCurrentValueControlFunctions};
+  // export {getSelectedElemPositions, getValueControlFunctions};
