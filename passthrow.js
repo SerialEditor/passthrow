@@ -9,15 +9,16 @@ function getSelectedElemPositions(assembledElems, selectedElems) {
     });
   }
 
-  function getValueControlFunctions(current) {
+  function controlValue(current) {
     return [
-      function () {
+      function() {
         return current;
       },
-      function (value) {
+      function(value) {
         current = value;
+        return current
       },
     ];
   }
 
-  // export {getSelectedElemPositions, getValueControlFunctions};
+  export {getSelectedElemPositions, controlValue};
