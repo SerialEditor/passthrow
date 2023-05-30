@@ -1,1 +1,1 @@
-This ES6-module exports object that contains two methods. 
+This ES6-module exports object that contains two methods. Additional description will appear later.
