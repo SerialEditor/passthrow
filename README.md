@@ -1,0 +1,1 @@
+This ES6-module exports object that contains two methods. 
