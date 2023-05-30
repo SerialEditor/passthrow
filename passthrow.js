@@ -1,4 +1,4 @@
-function getSelectedElemPositions(assembledElems, selectedElems) {
+function getUniqPositions(assembledElems, selectedElems) {
   if (!Array.isArray(assembledElems)) assembledElems = Array.from(assembledElems);
   if (!Array.isArray(selectedElems)) selectedElems = Array.from(selectedElems);
     let sequencePosition = 0;
@@ -21,4 +21,4 @@ function getSelectedElemPositions(assembledElems, selectedElems) {
     ];
   }
 
-  export {getSelectedElemPositions, controlValue};
+  export {getUniqPositions, controlValue};
