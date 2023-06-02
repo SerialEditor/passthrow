@@ -4,16 +4,20 @@
   "description": "",
   "main": "passthrow.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint passthrow.js"
   },
   "keywords": [],
   "author": {
     "name": "SerialEditor",
     "email": "refservicesamara@yandex.ru"
   },
+  "files": [
+    "passthrow.js"
+  ],
   "license": "ISC",
   "repository": {
     "type": "git",
     "url": "https://github.com/SerialEditor/passthrow"
-  }
+  },
+  "homepage": "https://github.com/SerialEditor/passthrow#readme"
 }
