@@ -1,4 +1,5 @@
-function getUniqPositions(assembledElems, selectedElems) {
+const passthrow = {
+  getUniqPositions(assembledElems, selectedElems) {
   if (!Array.isArray(assembledElems)) assembledElems = Array.from(assembledElems);
   if (!Array.isArray(selectedElems)) selectedElems = Array.from(selectedElems);
     let sequencePosition = 0;
@@ -7,9 +8,9 @@ function getUniqPositions(assembledElems, selectedElems) {
       sequencePosition = receivedPosition + 1;
       return receivedPosition;
     });
-  }
+  },
 
-  function controlValue(current) {
+  controlValue(current) {
     return [
       function() {
         return current;
@@ -20,5 +21,6 @@ function getUniqPositions(assembledElems, selectedElems) {
       },
     ];
   }
+}
 
-  export {getUniqPositions, controlValue};
+  export {passthrow};
