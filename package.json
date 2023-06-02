@@ -19,5 +19,9 @@
     "type": "git",
     "url": "https://github.com/SerialEditor/passthrow"
   },
-  "homepage": "https://github.com/SerialEditor/passthrow#readme"
+  "homepage": "https://github.com/SerialEditor/passthrow#readme",
+  "devDependencies": {
+    "eslint": "^8.41.0",
+    "eslint-config-airbnb": "^19.0.4"
+  }
 }
