@@ -1,6 +1,4 @@
 /* eslint-disable no-param-reassign */
-/* eslint-disable import/prefer-default-export */
-/* eslint-disable func-names */
 const passthrow = {
   getUniqPositions(assembledElems, selectedElems) {
     if (!Array.isArray(assembledElems)) assembledElems = Array.from(assembledElems);
@@ -13,18 +11,13 @@ const passthrow = {
     });
   },
 
-  controlValue(current) {
-    return [
-      function () {
-        return current;
-      },
-      function (value) {
-        // eslint-disable-next-line no-param-reassign
-        current = value;
-        return current;
-      },
-    ];
+  createValueController(init) {
+    return function valueController(func, ...rest) {
+      const result = rest.length === 0 ? func(init) : func(init, ...rest);
+      if (init !== result) init = result;
+      return result;
+    };
   },
 };
 
-export { passthrow };
+export default passthrow;

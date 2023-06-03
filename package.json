@@ -1,6 +1,6 @@
 {
   "name": "passthrow",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "",
   "main": "passthrow.js",
   "scripts": {
@@ -19,9 +19,11 @@
     "type": "git",
     "url": "https://github.com/SerialEditor/passthrow"
   },
+  "bugs": "https://github.com/SerialEditor/passthrow/issues",
   "homepage": "https://github.com/SerialEditor/passthrow#readme",
   "devDependencies": {
-    "eslint": "^8.41.0",
-    "eslint-config-airbnb": "^19.0.4"
+    "eslint": "^8.42.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.27.5"
   }
 }
