@@ -1,17 +1,24 @@
 /* eslint-disable no-param-reassign */
 const passthrow = {
-  getUniqPositions(assembledElems, selectedElems) {
-    if (!Array.isArray(assembledElems)) assembledElems = Array.from(assembledElems);
-    if (!Array.isArray(selectedElems)) selectedElems = Array.from(selectedElems);
-    let sequencePosition = 0;
-    return selectedElems.map((elem) => {
-      const receivedPosition = assembledElems.indexOf(elem, sequencePosition);
-      sequencePosition = receivedPosition + 1;
-      return receivedPosition;
+  getUniqIndices(assembledItems, selectedItems) {
+    if (!Array.isArray(assembledItems)) assembledItems = Array.from(assembledItems);
+    if (!Array.isArray(selectedItems)) selectedItems = Array.from(selectedItems);
+    let sequenceIndex = 0;
+    return selectedItems.map((elem) => {
+      const receivedIndex = assembledItems.indexOf(elem, sequenceIndex);
+      sequenceIndex = receivedIndex + 1;
+      return receivedIndex;
     });
   },
 
-  createValueController(init) {
+  filterIndices(arr, target) {
+    return arr.reduce((indices, item, index) => {
+      if (item === target) indices.push(index);
+      return indices;
+    }, []);
+  },
+
+  createIndexController(init) {
     return function valueController(func, ...rest) {
       const result = rest.length === 0 ? func(init) : func(init, ...rest);
       if (init !== result) init = result;
