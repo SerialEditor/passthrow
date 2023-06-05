@@ -18,11 +18,15 @@ const passthrow = {
     }, []);
   },
 
-  createIndexController(init) {
-    return function indexController(func, ...rest) {
-      const result = rest.length === 0 ? func(init) : func(init, ...rest);
-      if (init !== result) init = result;
-      return result;
+  controlIndex(current) {
+    return {
+      getCurrent() {
+        return current;
+      },
+      getChanged(value) {
+        current = value;
+        return current;
+      },
     };
   },
 };
