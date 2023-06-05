@@ -1,6 +1,6 @@
 /* eslint-disable no-param-reassign */
 const passthrow = {
-  getUniqIndices(assembledItems, selectedItems) {
+  filterUniqIndices(assembledItems, selectedItems) {
     if (!Array.isArray(assembledItems)) assembledItems = Array.from(assembledItems);
     if (!Array.isArray(selectedItems)) selectedItems = Array.from(selectedItems);
     let sequenceIndex = 0;
