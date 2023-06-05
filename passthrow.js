@@ -11,15 +11,15 @@ const passthrow = {
     });
   },
 
-  filterIndices(arr, target) {
-    return arr.reduce((indices, item, index) => {
-      if (item === target) indices.push(index);
+  filterIndices(arr, func) {
+    return arr.reduce((indices, item, index, array) => {
+      if (func(item, index, array)) indices.push(index);
       return indices;
     }, []);
   },
 
   createIndexController(init) {
-    return function valueController(func, ...rest) {
+    return function indexController(func, ...rest) {
       const result = rest.length === 0 ? func(init) : func(init, ...rest);
       if (init !== result) init = result;
       return result;
