@@ -1,1 +1,11 @@
-This ES6-module exports object that contains two methods. Additional description will appear later.
+Описание библиотеки
+
+Библиотека представляет собой ES6-модуль, экспортирующий объект passthrow:
+
+import passthrow from 'passthrow'
+
+На данный момент объект содержит три метода, целенаправленно созданных для работы с индексами массивов (не исключено, что вы сможете найти им не менее прагматичное применение)
+
+Описание методов
+
+Метод filterInterestingIndices ищет в исследуемом массиве элементы, содержащиеся в целевом массиве 
