@@ -3,11 +3,14 @@ const passthrow = {
   filterInterestingIndices(assembledItems, selectedItems) {
     if (!Array.isArray(assembledItems)) assembledItems = Array.from(assembledItems);
     if (!Array.isArray(selectedItems)) selectedItems = Array.from(selectedItems);
-    let sequenceIndex = 0;
-    return selectedItems.map((elem) => {
-      const receivedIndex = assembledItems.indexOf(elem, sequenceIndex);
-      sequenceIndex = receivedIndex + 1;
-      return receivedIndex;
+    let sequencePos = 0;
+    return selectedItems.map((item) => {
+      const receivedIndex = assembledItems.indexOf(item, sequencePos);
+      const returnedIndex = receivedIndex !== -1
+        ? receivedIndex
+        : assembledItems.slice(0, sequencePos).indexOf(item, 0);
+      sequencePos = returnedIndex !== -1 ? returnedIndex : 0;
+      return returnedIndex;
     });
   },
 
