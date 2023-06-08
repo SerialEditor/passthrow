@@ -30,6 +30,7 @@ const filterInterestingIndices = passthrow.filterInterestingIndices;
 let result = filterInterestingIndices(search, target);
 
 Аргументами метода могут быть не только массивы, но и массивоподобные (ArrayLike) / итерируемые объекты (данные структуры преобразуются в массивы внутри метода).
+Появление метода инспирировано реальным кейсом; репозиторий макетного прототипа кейса https://github.com/SerialEditor/passthrow_demonstration_page предоставляет пример практического применения метода.
 
 filterIndices
 
@@ -40,7 +41,6 @@ let result = filterIndices(search, function(item, index, array) {
 });
 
 Функция func вызывается по очереди для каждого элемента item массива search; метод возвращает массив индексов элементов search, для которых вызов func вернул true.
-Появление метода инспирировано реальным кейсом; репозиторий макетного прототипа кейса https://github.com/SerialEditor/passthrow_demonstration_page предоставляет пример практического применения метода.
 
 controlIndex 
 
