@@ -25,14 +25,14 @@
 
 <h3>filterInterestingIndices</h3>
 
-<p>Метод <code>filterInterestingIndices</code> ищет в исследуемом массиве <code>search</code> элементы целевого массива <code>target</code> (пересекающиеся элементы), возвращая массив индексов элементов <code>target</code> в <code>search</code> (если элемент, принадлежащий <code>target</code>, отсутствует, в <code>search</code> (то есть, пересечения нет) результатом будет -1):</p>
+<p>Метод <code>filterInterestingIndices</code> ищет в исследуемом массиве <code>search</code> элементы целевого массива <code>target</code> (идентичные элементы), возвращая массив индексов элементов <code>search</code>, оказавшихся идентичными элементам<code>target</code> (если элемент, принадлежащий <code>target</code>, отсутствует в <code>search</code> (не нашлось ни одного идентичного), результатом будет -1):</p>
 
 <code>const filterInterestingIndices = passthrow.filterInterestingIndices;</code>
 
 <code>let result = filterInterestingIndices(search, target);</code>
 
-<p>Аргументами метода могут быть не только <b>массивы</b>, но и <b>массивоподобные (ArrayLike) / итерируемые объекты</b> (данные структуры преобразуются в массивы внутри метода).
-Появление метода инспирировано реальным кейсом; репозиторий макетного прототипа кейса <a>https://github.com/SerialEditor/passthrow_demonstration_page</a> предоставляет пример практического применения метода.</p>
+<p>Аргументами метода могут быть не только <b>массивы</b>, но и <b>массивоподобные (ArrayLike) / итерируемые объекты</b> (данные структуры преобразуются в массивы внутри метода).</p>
+<p>Появление метода инспирировано реальным кейсом; репозиторий макетного прототипа кейса <a>https://github.com/SerialEditor/passthrow_demonstration_page</a> предоставляет пример практического применения метода.</p>
 
 <h3>filterIndices</h3>
 
