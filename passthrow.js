@@ -1,14 +1,14 @@
 /* eslint-disable no-param-reassign */
 const passthrow = {
-  filterInterestingIndices(assembledItems, selectedItems) {
-    if (!Array.isArray(assembledItems)) assembledItems = Array.from(assembledItems);
-    if (!Array.isArray(selectedItems)) selectedItems = Array.from(selectedItems);
+  filterInterestingIndices(search, target) {
+    if (!Array.isArray(search)) search = Array.from(search);
+    if (!Array.isArray(target)) target = Array.from(target);
     let sequencePos = 0;
-    return selectedItems.map((item) => {
-      const receivedIndex = assembledItems.indexOf(item, sequencePos);
+    return target.map((item) => {
+      const receivedIndex = search.indexOf(item, sequencePos);
       const returnedIndex = receivedIndex !== -1
         ? receivedIndex
-        : assembledItems.slice(0, sequencePos).indexOf(item, 0);
+        : search.slice(0, sequencePos).indexOf(item, 0);
       sequencePos = returnedIndex !== -1 ? returnedIndex : 0;
       return returnedIndex;
     });
