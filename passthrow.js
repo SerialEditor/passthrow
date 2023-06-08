@@ -1,3 +1,4 @@
+/* eslint-disable func-names */
 /* eslint-disable no-param-reassign */
 const passthrow = {
   filterInterestingIndices(search, target) {
@@ -22,15 +23,15 @@ const passthrow = {
   },
 
   controlIndex(current) {
-    return {
-      getCurrent() {
+    return [
+      function () {
         return current;
       },
-      getChanged(value) {
+      function (value) {
         current = value;
         return current;
       },
-    };
+    ];
   },
 };
 

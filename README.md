@@ -1,8 +1,10 @@
-Описание библиотеки
+<h1>passthrow.js</h1>
 
-Библиотека представляет собой ES6-модуль, экспортирующий объект passthrow:
+<h2>Описание библиотеки</h2>
 
-import passthrow from 'passthrow'
+<p>Библиотека представляет собой ES6-модуль, экспортирующий объект <code>passthrow</code>:</p>
+
+<pre><code>import passthrow from 'passthrow'
 
 /* {
     filterInterestingIndices(search, target) {
@@ -15,40 +17,40 @@ import passthrow from 'passthrow'
         ...
     }
 }
-*/
+*/</code></pre>
 
-На данный момент объект содержит три метода, целенаправленно созданных для работы с индексами массивов (не исключено, что вы сможете найти им не менее прагматичное применение)
+<p>На данный момент объект содержит три метода, целенаправленно созданных для работы с индексами массивов (не исключено, что вы сможете найти им не менее прагматичное применение)</p>
 
-Описание методов
+<h2>Описание методов</h2>
 
-filterInterestingIndices
+<h3>filterInterestingIndices</h3>
 
-Метод filterInterestingIndices ищет в исследуемом массиве search элементы целевого массива target (пересекающиеся элементы), возвращая массив индексов элементов target в search (если элемент, принадлежащий target, отсутствует в search, результатом будет -1):
+<p>Метод <code>filterInterestingIndices</code> ищет в исследуемом массиве <code>search</code> элементы целевого массива <code>target</code> (пересекающиеся элементы), возвращая массив индексов элементов <code>target</code> в <code>search</code> (если элемент, принадлежащий <code>target</code>, отсутствует, в <code>search</code> (то есть, пересечения нет) результатом будет -1):</p>
 
-const filterInterestingIndices = passthrow.filterInterestingIndices;
+<code>const filterInterestingIndices = passthrow.filterInterestingIndices;</code>
 
-let result = filterInterestingIndices(search, target);
+<code>let result = filterInterestingIndices(search, target);</code>
 
-Аргументами метода могут быть не только массивы, но и массивоподобные (ArrayLike) / итерируемые объекты (данные структуры преобразуются в массивы внутри метода).
-Появление метода инспирировано реальным кейсом; репозиторий макетного прототипа кейса https://github.com/SerialEditor/passthrow_demonstration_page предоставляет пример практического применения метода.
+<p>Аргументами метода могут быть не только <b>массивы</b>, но и <b>массивоподобные (ArrayLike) / итерируемые объекты</b> (данные структуры преобразуются в массивы внутри метода).
+Появление метода инспирировано реальным кейсом; репозиторий макетного прототипа кейса <a>https://github.com/SerialEditor/passthrow_demonstration_page</a> предоставляет пример практического применения метода.</p>
 
-filterIndices
+<h3>filterIndices</h3>
 
-Синтаксис:
+<b>Синтаксис:</b>
 
-let result = filterIndices(search, function(item, index, array) {
+<pre><code>let result = filterIndices(search, function(item, index, array) {
     ...
-});
+});</code></pre>
 
-Функция func вызывается по очереди для каждого элемента item массива search; метод возвращает массив индексов элементов search, для которых вызов func вернул true.
+<p>Функция <code>func</code> вызывается по очереди для каждого элемента <code>item</code> массива <code>search</code>; метод возвращает массив индексов элементов <code>search</code>, для которых вызов <code>func</code> вернул <code>true<code>.</p>
 
-controlIndex 
+<h3>controlIndex</h3>
 
-const controlIndex = passthrow.controlIndex(init);
+<code>const controlIndex = passthrow.controlIndex(init);</code>
 
-Вызов controlIndex создает счетчик, позволяющий управлять начальным значением init через замыкание с помощью методов возвращаемого вызовом controlIndex объекта: 
+Вызов <code>controlIndex</code> создает счетчик, позволяющий управлять начальным значением <code>init</code> через замыкание с помощью функций возвращаемого вызовом <code>controlIndex</code> массива: 
 
-/*controlIndex = {
+<pre><code>/*controlIndex = {
     getCurrent() {
         return current;
       },
@@ -57,4 +59,4 @@ const controlIndex = passthrow.controlIndex(init);
         return current;
       },
 } 
-*/
+*/</code></pre>
