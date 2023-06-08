@@ -50,13 +50,12 @@
 
 Вызов <code>controlIndex</code> создает счетчик, позволяющий управлять начальным значением <code>init</code> через замыкание с помощью функций возвращаемого вызовом <code>controlIndex</code> массива: 
 
-<pre><code>/*controlIndex = {
-    getCurrent() {
+<pre><code>controlIndex = [
+    function () {
         return current;
       },
-      getChanged(value) {
+      function (value) {
         current = value;
         return current;
       },
-} 
-*/</code></pre>
+]</code></pre>
