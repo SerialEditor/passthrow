@@ -4,15 +4,7 @@ const passthrow = {
   filterInterestingIndices(search, target) {
     if (!Array.isArray(search)) search = Array.from(search);
     if (!Array.isArray(target)) target = Array.from(target);
-    let sequencePos = 0;
-    return target.map((item) => {
-      const receivedIndex = search.indexOf(item, sequencePos);
-      const returnedIndex = receivedIndex !== -1
-        ? receivedIndex
-        : search.slice(0, sequencePos).indexOf(item, 0);
-      sequencePos = returnedIndex !== -1 ? returnedIndex : 0;
-      return returnedIndex;
-    });
+    return target.map((targetItem) => search.findIndex((searchItem) => searchItem === targetItem));
   },
 
   filterIndices(arr, func) {
