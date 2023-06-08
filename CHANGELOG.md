@@ -1,3 +1,9 @@
+#### 2.1.0 (2023-06-08)
+
+##### New Features
+
+*  Замена объекта с методами на массив функций в controlIndex ([66e7dabe](https://github.com/SerialEditor/passthrow/commit/66e7dabee07408fcf81a91985433e51411893f98))
+
 #### 2.1.0 (2023-06-07)
 
 ##### New Features
