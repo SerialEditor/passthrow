@@ -1,12 +1,16 @@
 {
   "name": "passthrow",
-  "version": "1.0.0",
+  "version": "2.1.0",
   "description": "",
   "main": "passthrow.js",
   "scripts": {
     "lint": "eslint passthrow.js"
   },
-  "keywords": ["javascript", "индексы элементов массива", "array element indices"],
+  "keywords": [
+    "javascript",
+    "индексы элементов массива",
+    "array element indices"
+  ],
   "author": {
     "name": "SerialEditor",
     "email": "refservicesamara@yandex.ru"
