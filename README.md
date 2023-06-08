@@ -25,7 +25,7 @@
 
 <h3>filterInterestingIndices</h3>
 
-<p>Метод <code>filterInterestingIndices</code> ищет в исследуемом массиве <code>search</code> элементы целевого массива <code>target</code> (идентичные элементы), возвращая массив индексов элементов <code>search</code>, оказавшихся идентичными элементам<code>target</code> (если элемент, принадлежащий <code>target</code>, отсутствует в <code>search</code> (не нашлось ни одного идентичного), результатом будет -1):</p>
+<p>Метод <code>filterInterestingIndices</code> ищет в исследуемом массиве <code>search</code> элементы целевого массива <code>target</code>, возвращая массив индексов элементов <code>search</code>, идентичных элементам<code>target</code> (если элемент <code>target</code> отсутствует в <code>search</code> (не нашлось ни одного идентичного), результатом будет -1):</p>
 
 <code>const filterInterestingIndices = passthrow.filterInterestingIndices;</code>
 
@@ -42,7 +42,7 @@
     ...
 });</code></pre>
 
-<p>Функция <code>func</code> вызывается по очереди для каждого элемента <code>item</code> массива <code>search</code>; метод возвращает массив индексов элементов <code>search</code>, для которых вызов <code>func</code> вернул <code>true<code>.</p>
+<p>Функция <code>func</code> вызывается по очереди для каждого элемента <code>item</code> массива <code>search</code>; метод возвращает массив индексов элементов <code>search</code>, для которых вызов <code>func</code> вернул <code>true</code>.</p>
 
 <h3>controlIndex</h3>
 
