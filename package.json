@@ -8,8 +8,12 @@
   },
   "keywords": [
     "javascript",
+    "array",
+    "index",
     "индексы элементов массива",
-    "array element indices"
+    "array element indices",
+    "непрерывный подмассив",
+    "continuous subarray"
   ],
   "author": {
     "name": "SerialEditor",
