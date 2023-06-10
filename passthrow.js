@@ -25,6 +25,17 @@ const passthrow = {
       },
     ];
   },
+
+  continuousSubArrays(array) {
+    const l = array.length;
+    const subArrays = [];
+
+    for (let i = 0; i < l; i += 1) {
+      for (let j = 0; j < l - i; j += 1) {
+        subArrays.push(array.slice(j, j + i + 1));
+      }
+    } return subArrays;
+  },
 };
 
 export default passthrow;
